@@ -1,20 +1,73 @@
 <% include ./partials/header.ejs%>
-<div class="w-full h-screen" style="background-image: url('https://images.unsplash.com/photo-1636044594149-6e2f289c3868?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center;">
-    <div class="mx-auto w-[420px] bg-white rounded-[30px] p-4 shadow-2xl">
-         <form action="" class="p-2 m-2">
-          <h1 class="mx-auto mt-3 inline-block w-full font-semibold text-3xl text-center">Create new Account !!</h1>
-          <label class="font-semibold mt-2 block w-full" name="username">Username</label>
-        <input class="border-2 rounded-lg mt-2 block w-full" type="text" name="username" placeholder="enter your User name" />
-          <label class="font-semibold mt-2 block w-full" name="name">Full Name</label>
-        <input class="border-2 rounded-lg mt-2 block w-full" type="text" name="name" placeholder="enter your full name" />
-        <label class="font-semibold mt-2 block w-full" name="email">Email</label>
-        <input class="border-2 rounded-lg mt-2 block w-full" type="text" name="email" placeholder="enter your email" />
-        <label class="font-semibold mt-2 block w-full" name="password">Password</label>
-        <input class="border-2 rounded-lg mt-2 block w-full" type="password" name="password" placeholder="enter your password" />
-         </form>
-        <a href="" class="w-full inline-block text-center bg-red-600 text-white rounded-full p-2 mt-3">Register</a>
-        <p class="mb-4 text-sm text-gray-600 w-3/4 mx-auto mt-3">By continuing, you agree to Pinterest's Terms of Service; Opens a new tab and acknowledge you've read our Privacy Policy..</p>
-        <a href="/" class=" inline-block text-sm font-semibold cursor-pointer text-center mb-4 w-full">Already have an account ? click here</a>
-      </div>
+<div
+  class="w-full h-screen"
+  style="
+    background-image: url('https://images.unsplash.com/photo-1636044594149-6e2f289c3868?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div class="mx-auto w-[420px] bg-white rounded-[30px] p-4 shadow-2xl">
+    <form action="/register" method="post" class="p-2 m-2">
+      <h1
+        class="mx-auto mt-3 inline-block w-full font-semibold text-3xl text-center"
+      >
+        Create new Account !!
+      </h1>
+      <label class="font-semibold mt-2 block w-full" name="username"
+        >Username</label
+      >
+      <input
+        class="border-2 rounded-lg mt-2 block w-full"
+        type="text"
+        name="username"
+        placeholder="enter your User name"
+      />
+      <label class="font-semibold mt-2 block w-full" name="name"
+        >Full Name</label
+      >
+      <input
+        class="border-2 rounded-lg mt-2 block w-full"
+        type="text"
+        name="name"
+        placeholder="enter your full name"
+      />
+      <label class="font-semibold mt-2 block w-full" name="email">Email</label>
+      <input
+        class="border-2 rounded-lg mt-2 block w-full"
+        type="text"
+        name="email"
+        placeholder="enter your email"
+      />
+      <label class="font-semibold mt-2 block w-full" name="password"
+        >Password</label
+      >
+      <input
+        class="border-2 rounded-lg mt-2 block w-full"
+        type="password"
+        name="password"
+        placeholder="enter your password"
+      />
+      <button
+      type="submit"
+      class="w-full inline-block text-center bg-red-600 text-white rounded-full p-2 mt-3"
+    >
+      Register
+    </button>
+    </form>
+    
+    <p class="mb-4 text-sm text-gray-600 w-3/4 mx-auto mt-3">
+      By continuing, you agree to Pinterest's Terms of Service; Opens a new tab
+      and acknowledge you've read our Privacy Policy..
+    </p>
+    <a
+      href="/"
+      class="inline-block text-sm font-semibold cursor-pointer text-center mb-4 w-full"
+      >Already have an account ? click here</a
+    >
+  </div>
 </div>
 <% include ./partials/footer.ejs%>
