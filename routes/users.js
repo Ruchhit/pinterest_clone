@@ -8,12 +8,18 @@
   .catch(()=> {console.log("cant conect to mongoo")})
  
   const userModel = new mongoose.Schema({
-   username : {type:String},
+    username: { type: String, required: true, unique: true },
    name : {type:String},
    email : {type:String},
    password : {type:String},
    profileImage : {type:String},
-   boards : { type : Array , default : []}
+   boards : { type : Array , default : []},
+   posts : [
+    {
+      type:mongoose.Schema.Types.ObjectId,
+      ref : "Post"
+    },
+   ]
  });
 
  userModel.plugin(plm)
