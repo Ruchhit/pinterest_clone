@@ -20,16 +20,19 @@
                 <a href="/add" class="p-2 m-2 w-3/4 rounded-lg bg-red-600 text-white font-semibold">Add a Post..</a>
             </div>
          </div>
-         <div class="w-full h-96 mt-4">
-            <div class="w-60 bg-zinc-300 flex flex-col mx-2 rounded-xl">
-                <div class="w-full h-full object-cover overflow-hidden rounded-tl-xl rounded-tr-xl">
-                    <img class="w-full h-full object-cover overflow-hidden" src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="k"/>
+          <% if(user.posts.length > 0){%>
+            <div class="w-full h-96 mt-4">
+                <div class="w-60 h-60 bg-zinc-300 object-cover overflow-hidden flex flex-col mx-2 rounded-xl">
+                    <div class="w-full h-full object-cover overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img src="/images/uploads/<%= user?.posts[0]?.postImage %>" alt="k"/>
+                    </div>
+                    <h2  class="pl-2 pb-2 text-lg font-semibold px-2">All_Pins - <%= user.posts.length%></h2>
+                    <h3 class="pl-2 pb-2 text-sm px-2">created by -<%= user.username%></h3>
+    
                 </div>
-                <h2  class="text-lg font-semibold px-2">allPins</h2>
-                <h3 class="text-sm px-2">created by</h3>
-
             </div>
-         </div>
+          <%}%>
+          
     </div>
     <script>
         document.querySelector("#uploadIcon").addEventListener("click", function () {

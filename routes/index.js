@@ -16,7 +16,8 @@ const isLoggedIn = (req,res,next)=>{
   res.redirect("/login");
 }
 router.get("/profile",isLoggedIn,async(req,res)=>{
-  const user = await userModel.findOne({username : req.session.passport.user});
+  const user = await userModel.findOne({username : req.session.passport.user}).populate("posts")
+  console.log(user)
   res.render("profile",{user,nav:true})
 })
 router.get('/', function(req, res, next) {

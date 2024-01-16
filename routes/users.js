@@ -9,8 +9,8 @@
  
   const userModel = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
-   name : {type:String},
-   email : {type:String},
+   name : { type: String, required: true, unique: true },
+   email : { type: String, required: true, unique: true },
    password : {type:String},
    profileImage : {type:String},
    boards : { type : Array , default : []},
